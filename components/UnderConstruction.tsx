@@ -246,13 +246,13 @@ export default function UnderConstructionPage() {
             </div>
 
             <div className="flex gap-4 text-white/60">
-              <a href="https://www.instagram.com/theimaaramall/" aria-label="Instagram" className="hover:text-[#FF3CAC] transition-colors">
+              <a href="https://www.instagram.com/theimaaramall/" target="_blank" aria-label="Instagram" className="hover:text-[#FF3CAC] transition-colors">
                 <Instagram />
               </a>
-              <a href="https://www.facebook.com/theimaaramall" aria-label="Facebook" className="hover:text-[#00CFFF] transition-colors">
+              <a href="https://www.facebook.com/theimaaramall" target="_blank" aria-label="Facebook" className="hover:text-[#00CFFF] transition-colors">
                 <Facebook />
               </a>
-              <a href="https://www.tiktok.com/@theimaaramall?_r=1&_t=ZS-96ZIjZEC6q0" aria-label="TikTok" className="hover:text-[#39FF14] transition-colors">
+              <a href="https://www.tiktok.com/@theimaaramall?_r=1&_t=ZS-96ZIjZEC6q0" target="_blank" aria-label="TikTok" className="hover:text-[#39FF14] transition-colors">
                 <TikTok />
               </a>
             </div>
