@@ -1,5 +1,15 @@
-import UnderConstruction from "@/components/UnderConstruction";
+"use client";
+
+import Hero from "@/components/Hero"
+import StoreCategories from "@/components/StoreCategories";
+import Deals from "@/components/Deals"
 
 export default function Home() {
-  return <UnderConstruction />;
+  return (
+    <>
+      <Hero />
+      <StoreCategories />
+      <Deals />
+    </>
+  );
 }

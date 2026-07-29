@@ -1,15 +1,33 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Fjalla_One, Quicksand, Lobster_Two } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// -----Web-components------
+import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+const fjalla = Fjalla_One({
   subsets: ["latin"],
+  weight: "400",
+  variable: "--font-fjalla",
+  display: "swap",
+});
+ 
+const quicksand = Quicksand({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-quicksand",
+  display: "swap",
+});
+ 
+const lobsterTwo = Lobster_Two({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-lobster",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -25,9 +43,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+       className={`${fjalla.variable} ${quicksand.variable} ${lobsterTwo.variable}`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
