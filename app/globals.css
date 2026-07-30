@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
+/* -------------------------------------------------------------------------
+   Brand color + font tokens
+   ------------------------------------------------------------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-orange: #f47a10;
+  --brand-red: #dd1109;
+  --brand-green: #059536;
+  --brand-purple: #978bc2;
+  --brand-yellow: #fbcf11;
+  --brand-pink: #e80978;
+  --brand-sand: #e6dcd0;
+  --brand-dark: #272727;
+  --brand-lime: #a6db50;
+
+  /* Populated by next/font in app/layout.tsx */
+  --font-fjalla: "Fjalla One", sans-serif;
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-lobster: "Lobster Two", cursive;
 }
 
+/* Register the tokens as Tailwind utilities (Tailwind v4 CSS-first config).
+   This gives us bg-brand-orange, text-brand-dark, border-brand-lime, etc.
+   in addition to the raw var(--brand-orange) form. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-red: var(--brand-red);
+  --color-brand-green: var(--brand-green);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-sand: var(--brand-sand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-lime: var(--brand-lime);
+
+  --font-display: var(--font-fjalla);
+  --font-sans: var(--font-quicksand);
+  --font-accent: var(--font-lobster);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* -------------------------------------------------------------------------
+   Base reset / defaults
+   ------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--brand-sand);
+    color: var(--brand-dark);
+    font-family: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-fjalla), sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  button,
+  input,
+  textarea,
+  select,
+  a {
+    font-family: var(--font-quicksand), sans-serif;
+  }
+
+  /* Keep focus visible for keyboard users against the bright palette */
+  :focus-visible {
+    outline: 3px solid var(--brand-orange);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* -------------------------------------------------------------------------
+   Utilities
+   ------------------------------------------------------------------------- */
+.font-accent {
+  font-family: var(--font-lobster), cursive;
+}
+
+/* Two-tone underline sweep used on primary nav links: orange sweeps in first,
+   lime trails a beat behind it, so the hover reads as one motion, not a flat line. */
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 100%;
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-link::before {
+  background-color: var(--brand-orange);
+  transition-delay: 0s;
+}
+
+.nav-link::after {
+  background-color: var(--brand-lime);
+  transform: translateY(3px) scaleX(0);
+  transition: transform 0.3s ease 0.08s;
+}
+
+.nav-link:hover::before,
+.nav-link:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: translateY(3px) scaleX(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .nav-link::before,
+  .nav-link::after {
+    transition: none;
+  }
 }
