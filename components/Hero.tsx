@@ -25,7 +25,7 @@ export default function Hero() {
   const goToNext = () => goTo((current + 1) % HERO_SLIDES.length);
 
   // Kick off the "slide in" transition on the frame after the index changes,
-  // so the incoming slide reliably animates from translate-x-full -> 0.
+  // so the incoming slide reliably animates from translate-y-full -> 0.
   useEffect(() => {
     const raf = requestAnimationFrame(() => setEntered(true));
     return () => cancelAnimationFrame(raf);
@@ -78,13 +78,13 @@ export default function Hero() {
         />
       )}
 
-      {/* Incoming slide covers the previous one, sliding in from the right */}
+      {/* Incoming slide covers the previous one, sliding in from the top */}
       <HeroSlideView
         key={current}
         slide={HERO_SLIDES[current]}
         active
         className={`z-20 transition-transform duration-700 ease-in-out ${
-          entered ? "translate-x-0" : "translate-x-full"
+          entered ? "translate-y-0" : "-translate-y-full"
         }`}
         onTransitionEnd={() => setPrevious(null)}
         parallaxOffset={parallaxOffset}
