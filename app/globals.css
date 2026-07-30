@@ -142,3 +142,33 @@
     transition: none;
   }
 }
+
+/* ==========================================================================
+   6. SCROLLBAR STYLING
+   ========================================================================== */
+
+/* WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--brand-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--brand-sand);
+  border-radius: 999px;
+  border: 2px solid var(--brand-purple);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--brand-lime);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-sand) var(--brand-purple);
+}

@@ -104,6 +104,24 @@ export const STORES: Store[] = [
 ];
 
 // -----------------------------------------------------------------------------
+// Store categories
+// -----------------------------------------------------------------------------
+export interface CategoryInfo {
+  name: StoreCategory;
+  image: string;
+}
+ 
+export const CATEGORIES: CategoryInfo[] = [
+  { name: "Fashion", image: "/images/categories/category-fashion.jpg" },
+  { name: "Beauty & Wellness", image: "/images/categories/category-beauty.jpg" },
+  { name: "Electronics", image: "/images/categories/category-electronics.jpg" },
+  { name: "Kids & Toys", image: "/images/categories/category-kids-toys.jpg" },
+  { name: "Dining", image: "/images/categories/category-dining.jpg" },
+  { name: "Entertainment", image: "/images/categories/category-entertainment.jpg" },
+  { name: "Home & Living", image: "/images/categories/category-home-living.jpg" },
+];
+
+// -----------------------------------------------------------------------------
 // Hero carousel
 // -----------------------------------------------------------------------------
 export interface HeroSlide {
@@ -149,5 +167,48 @@ export const HERO_SLIDES: HeroSlide[] = [
     tagline: "Deals worth the trip",
     link: "/offers",
     image: "/images/hero/hero-offers.jpg",
+  },
+];
+
+// -----------------------------------------------------------------------------
+// Mall services / amenities
+// -----------------------------------------------------------------------------
+export interface MallService {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+}
+ 
+export const SERVICES: MallService[] = [
+  {
+    id: "free-wifi",
+    title: "Free Wi-Fi",
+    description: "Fast, complimentary internet across every level of the mall.",
+    link: "/services/free-wifi",
+  },
+  {
+    id: "prayer-rooms",
+    title: "Prayer Rooms",
+    description: "Quiet, dedicated rooms open throughout the day for all faiths.",
+    link: "/services/prayer-rooms",
+  },
+  {
+    id: "accessible-parking",
+    title: "Disabled Parking & Ramps",
+    description: "Reserved accessible bays and step-free ramp access at every entrance.",
+    link: "/services/accessible-parking",
+  },
+  {
+    id: "ample-parking",
+    title: "Ample Parking",
+    description: "Multi-level parking with real-time bay availability and valet options.",
+    link: "/services/ample-parking",
+  },
+  {
+    id: "atms",
+    title: "ATM Machines",
+    description: "Multiple bank ATMs conveniently located near entrances and the food court.",
+    link: "/services/atms",
   },
 ];
