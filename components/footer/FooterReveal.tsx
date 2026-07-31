@@ -16,10 +16,14 @@ export default function FooterReveal({
 
     if (!footer) return;
 
+    const content = footer.querySelector(".footer-content");
+
+    if (!content) return;
+
     const animation = gsap.fromTo(
-      footer,
+      content,
       {
-        yPercent: 35,
+        yPercent: 18,
       },
       {
         yPercent: 0,
@@ -27,7 +31,7 @@ export default function FooterReveal({
         scrollTrigger: {
           trigger: footer,
           start: "top bottom",
-          end: "bottom bottom",
+          end: () => "+=" + window.innerHeight * 0.5,
           scrub: true,
           invalidateOnRefresh: true,
         },
@@ -43,7 +47,7 @@ export default function FooterReveal({
     },
     });
 
-    tl.from(".footer-reveal", {
+    tl.from(".footer-content", {
     opacity: 0,
     y: 80,
     stagger: 0.18,

@@ -11,13 +11,13 @@ export default function Footer() {
   return (
     <footer
       id="footer"
-      className="relative bg-brand-dark text-brand-sand overflow-hidden"
+      className="relative bg-brand-dark text-brand-sand"
     >
       <FooterReveal>
-        <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-0 lg:px-10">
+        <div className="relative mx-auto flex min-h-screen w-full max-w-7xl flex-col px-6 py-0 lg:px-10 footer-content">
           <FooterNewsletter />
 
-          <div className="grid gap-20 lg:grid-cols-[1fr_1fr]">
+          <div className="grid gap-20 lg:grid-cols-[1fr_1fr] mt-10">
 
                 <FooterAddress />
 
