@@ -3,7 +3,7 @@
 import Hero from "@/components/Hero"
 import StoreCategories from "@/components/StoreCategories";
 import ServicesScrollSection from "@/components/ServicesScrollSection";
-import Deals from "@/components/Deals"
+import OffersSection from "@/components/OffersSection";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <StoreCategories />
       <ServicesScrollSection />
-      <Deals />
+      <OffersSection />
     </>
   );
 }

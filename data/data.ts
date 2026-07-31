@@ -212,3 +212,160 @@ export const SERVICES: MallService[] = [
     link: "/services/atms",
   },
 ];
+
+// -----------------------------------------------------------------------------
+// Offers
+// -----------------------------------------------------------------------------
+export interface Offer {
+  id: string;
+  storeId: string;
+  title: string;
+  image: string;
+}
+ 
+export const OFFERS: Offer[] = [
+  {
+    id: "offer-north-star-fashion",
+    storeId: "north-star-fashion",
+    title: "Buy 2, Get 1 Free",
+    image: "/images/offers/offer.jpg",
+  },
+  {
+    id: "offer-velvet-and-vine",
+    storeId: "velvet-and-vine",
+    title: "20% Off All Facials",
+    image: "/images/offers/offer1.jpg",
+  },
+  {
+    id: "offer-circuit-and-co",
+    storeId: "circuit-and-co",
+    title: "Bonus Trade-In Credit",
+    image: "/images/offers/offer2.jpg",
+  },
+  {
+    id: "offer-little-explorers",
+    storeId: "little-explorers",
+    title: "Kids' Books, 3 for 2",
+    image: "/images/offers/offer3.jpg",
+  },
+  {
+    id: "offer-harbor-social",
+    storeId: "harbor-social",
+    title: "Happy Hour All Day Sunday",
+    image: "/images/offers/offer4.jpg",
+  },
+  {
+    id: "offer-pixel-arcade",
+    storeId: "pixel-arcade",
+    title: "Double Arcade Credits",
+    image: "/images/offers/offer5.jpg",
+  },
+];
+
+//-------FOOTER DETAILS-------//
+export const footerLinks = {
+  explore: [
+    {
+      title: "Stores",
+      href: "/stores",
+    },
+    {
+      title: "Dining",
+      href: "/dining",
+    },
+    {
+      title: "Entertainment",
+      href: "/entertainment",
+    },
+    {
+      title: "Events",
+      href: "/events",
+    },
+    {
+      title: "Offers",
+      href: "/offers",
+    },
+    {
+      title: "Gift Cards",
+      href: "/gift-cards",
+    },
+  ],
+
+  information: [
+    {
+      title: "About Imaara",
+      href: "/about",
+    },
+    {
+      title: "Leasing",
+      href: "/leasing",
+    },
+    {
+      title: "Careers",
+      href: "/careers",
+    },
+    {
+      title: "Contact",
+      href: "/contact",
+    },
+  ],
+
+  legal: [
+    {
+      title: "Privacy",
+      href: "/privacy",
+    },
+    {
+      title: "Terms",
+      href: "/terms",
+    },
+    {
+      title: "Cookies",
+      href: "/cookies",
+    },
+    {
+      title: "Accessibility",
+      href: "/accessibility",
+    },
+  ],
+};
+
+export const mallInfo = {
+  name: "IMAARA",
+
+  slogan: "The Heart of Shopping",
+
+  address: [
+    "Imaara Mall",
+    "Mombasa Road",
+    "Nairobi, Kenya",
+  ],
+
+  email: "hello@imaara.co.ke",
+
+  phone: "+254 700 000 000",
+
+  openingHours: [
+    "Mon – Fri · 9:00 AM – 9:00 PM",
+    "Sat – Sun · 9:00 AM – 10:00 PM",
+  ],
+};
+
+export const socialLinks = [
+  {
+    name: "Instagram",
+    href: "#",
+  },
+  {
+    name: "Facebook",
+    href: "#",
+  },
+  {
+    name: "TikTok",
+    href: "#",
+  },
+  {
+    name: "LinkedIn",
+    href: "#",
+  },
+];
