@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Search } from "lucide-react";
 
 // -----------------------------------------------------------------------------
 // Content
@@ -19,14 +20,9 @@ const MAIN_NAV = [
     dropdown: ["Restaurants", "Cafes", "Fast Casual"],
   },
   {
-    label: "Stay",
-    href: "/stay",
-    dropdown: ["Hotels", "Serviced Apartments"],
-  },
-  {
     label: "Entertain",
     href: "/events",
-    dropdown: ["Cinema", "Kids Zone", "Live Events"],
+    dropdown: ["Kids Zone", "Live Events"],
   },
   {
     label: "Plan Your Visit",
@@ -37,9 +33,8 @@ const MAIN_NAV = [
 ];
 
 const QUICK_LINKS = [
-  { label: "Grand Atrium", href: "/directory/grand-atrium" },
+  { label: "Rooftop", href: "/directory/rooftop" },
   { label: "Garden Terrace", href: "/directory/garden-terrace" },
-  { label: "Riverside Walk", href: "/directory/riverside-walk" },
   { label: "Offers", href: "/offers" },
   { label: "Events", href: "/events" },
   { label: "Exhibition Hall", href: "/directory/exhibition-hall" },
@@ -128,7 +123,7 @@ export default function Navbar() {
           {/* Desktop-only quick actions */}
           <div className="hidden items-center gap-4 text-sm font-semibold text-brand-dark md:flex">
             <a
-              href="https://wa.me/000000000"
+              href="https://wa.me/254757800800"
               aria-label="Chat with us"
               className="flex h-8 w-8 items-center justify-center rounded-full text-brand-green transition-transform hover:-translate-y-0.5"
             >
@@ -137,7 +132,7 @@ export default function Navbar() {
               </svg>
             </a>
             <a href="/gift-cards" className="hover:text-brand-orange">
-              Gift Cards
+              <Search />
             </a>
           </div>
 
@@ -195,7 +190,7 @@ export default function Navbar() {
             ? "circle(150% at calc(100% - 34px) 34px)"
             : "circle(0% at calc(100% - 34px) 34px)",
         }}
-        className={`fixed inset-0 z-50 bg-brand-dark transition-[clip-path] duration-700 ease-in-out md:hidden ${
+        className={`fixed inset-0 z-50 bg-brand-purple transition-[clip-path] duration-700 ease-in-out md:hidden ${
           menuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
