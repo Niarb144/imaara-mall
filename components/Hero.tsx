@@ -65,7 +65,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-[70dvh] min-h-[480px] w-full overflow-hidden bg-brand-dark"
+      className="relative h-[100dvh] min-h-[480px] w-full overflow-hidden bg-brand-dark"
       aria-roledescription="carousel"
       aria-label="Mall highlights"
     >
@@ -153,7 +153,7 @@ function HeroSlideView({
         />
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 " />
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end gap-3 px-6 pb-28 sm:px-10 sm:pb-32">
         <p className="font-accent text-2xl text-brand-yellow sm:text-3xl">

@@ -40,7 +40,7 @@ export default function StoreCategories() {
               key={category.name}
               href={`/directory?category=${encodeURIComponent(category.name)}`}
               style={{ transitionDelay: visible ? `${index * 90}ms` : "0ms" }}
-              className={`group relative isolate block aspect-[4/5] w-full min-h-[220px] overflow-hidden rounded-2xl bg-brand-pink shadow-sm transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-20 hover:scale-110 hover:shadow-2xl ${
+              className={`group relative isolate block aspect-[4/5] w-full min-h-[220px] md:min-h-[350px] overflow-hidden rounded-2xl bg-brand-pink shadow-sm transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-20 hover:scale-110 hover:shadow-2xl ${
                 visible
                   ? "translate-y-0 opacity-100"
                   : "-translate-y-12 opacity-0"
@@ -57,7 +57,7 @@ export default function StoreCategories() {
               />
 
               {/* Pink brand overlay, deepening on hover to seat the revealed text */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-pink/90 via-brand-pink/50 to-brand-pink/10 transition-all duration-500 group-hover:from-brand-pink/95 group-hover:via-brand-pink/80 group-hover:to-brand-pink/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-pink/30 via-brand-pink/10 transition-all duration-500 group-hover:from-brand-pink/95 group-hover:via-brand-pink/80 group-hover:to-brand-pink/30" />
 
               <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-5">
                 <h3 className="break-words text-base font-normal uppercase leading-tight tracking-wide text-white sm:text-lg md:text-xl">

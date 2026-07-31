@@ -5,6 +5,7 @@ import "./globals.css";
 // -----Web-components------
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import SmoothScrollProvider from "@/components/SmoothScrollProvider"
 
 // -----------------------------------------------------------------------------
 // Fonts
@@ -47,8 +48,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
-        <Footer />
+        <SmoothScrollProvider>
+          {children}
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

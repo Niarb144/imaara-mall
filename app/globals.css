@@ -43,11 +43,8 @@
    Base reset / defaults
    ------------------------------------------------------------------------- */
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
+  
+   body {
     background-color: var(--brand-sand);
     color: var(--brand-dark);
     font-family: var(--font-quicksand), ui-sans-serif, system-ui, sans-serif;
@@ -81,6 +78,27 @@
     outline-offset: 2px;
     border-radius: 2px;
   }
+}
+
+/* -------------------------------------------------------------------------
+   GSAP ScrollSmoother — required wrapper/content structure.
+   Navbar deliberately lives outside #smooth-content (see
+   SmoothScrollProvider.tsx) so its position: sticky keeps working.
+   ------------------------------------------------------------------------- */
+html,
+body {
+  overscroll-behavior: none;
+}
+ 
+#smooth-wrapper {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+ 
+#smooth-content {
+  width: 100%;
+  overflow: visible;
 }
 
 /* -------------------------------------------------------------------------
@@ -133,10 +151,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
+  
   .nav-link::before,
   .nav-link::after {
     transition: none;
