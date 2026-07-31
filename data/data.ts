@@ -341,9 +341,9 @@ export const mallInfo = {
     "Nairobi, Kenya",
   ],
 
-  email: "hello@imaara.co.ke",
+  email: "marketing@theimaara.co.ke",
 
-  phone: "+254 700 000 000",
+  phone: "+254 757 800 800",
 
   openingHours: [
     "Mon – Fri · 9:00 AM – 9:00 PM",

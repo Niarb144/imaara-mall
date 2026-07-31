@@ -95,7 +95,7 @@ export default function FooterBrand() {
 
         <div className="footer-item">
           <Image
-            src="/images/logo.svg"
+            src="/images/logo.png"
             alt="Imaara Mall"
             width={140}
             height={140}

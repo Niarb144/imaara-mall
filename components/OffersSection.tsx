@@ -14,6 +14,8 @@ export default function OffersSection() {
   const cardRefs = useRef<Array<HTMLAnchorElement | null>>([]);
   const seeAllRef = useRef<HTMLAnchorElement>(null);
 
+  const rows = Math.ceil(OFFERS.length / 2);
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       const section = sectionRef.current;
@@ -22,12 +24,10 @@ export default function OffersSection() {
 
       // Every card starts well below its resting grid position, hidden
       // beneath the fold, so the initial view is just the title + tagline.
-      gsap.set(cards, { yPercent: 110, opacity: 0 });
+      gsap.set(cards, { yPercent: 90, opacity: 0 });
       if (seeAllRef.current) {
-        gsap.set(seeAllRef.current, { opacity: 0, y: 24 });
+        gsap.set(seeAllRef.current, { opacity: 0, y: 18 });
       }
-
-      const rows = Math.ceil(cards.length / 2);
 
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -64,6 +64,9 @@ export default function OffersSection() {
     }, sectionRef);
 
     return () => ctx.revert();
+    // rows is derived from static OFFERS data — it never changes across
+    // renders, so it's safe (and avoids dep-array churn) to omit it here.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -82,10 +85,32 @@ export default function OffersSection() {
         </p>
       </div>
 
-      {/* Two-column grid of offer cards */}
-      <div className="relative z-10 mx-auto grid h-full max-w-4xl grid-cols-2 items-center gap-4 px-4 py-[12vh] sm:gap-8 sm:py-40">
+      {/* Two-column grid of offer cards. Rows are explicitly sized as equal
+          fractions of the section's own height (rather than left to size
+          from aspect-ratio/content), so however many rows there are, they
+          always sum to exactly the space available — no row can ever push
+          past the bottom edge and get clipped by overflow-hidden. */}
+      <div
+        className="relative z-10 mx-auto grid h-full w-full max-w-4xl grid-cols-2 gap-2 px-4 py-6 sm:gap-4 sm:py-10 md:max-w-5xl md:gap-6 lg:max-w-6xl"
+        style={{ gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))` }}
+      >
         {OFFERS.map((offer, index) => {
           const store = STORES.find((s) => s.id === offer.storeId);
+
+          // Row-aware transform origin: on hover, a card scales up to show
+          // a fuller view. Scaling from dead-center would push the top row
+          // up past the section's top edge (and the bottom row down past
+          // its bottom edge) — right back into the same overflow-hidden
+          // clipping this layout was built to avoid. Growing top-row cards
+          // downward and bottom-row cards upward keeps the expansion
+          // entirely inside the section regardless of which row it's in.
+          const rowIndex = Math.floor(index / 2);
+          const originClass =
+            rowIndex === 0
+              ? "md:origin-top"
+              : rowIndex === rows - 1
+                ? "md:origin-bottom"
+                : "md:origin-center";
 
           return (
             <Link
@@ -94,7 +119,7 @@ export default function OffersSection() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className="group relative aspect-[4/5] overflow-hidden rounded-lg shadow-xl will-change-transform"
+              className={`group relative h-full w-full overflow-hidden rounded-lg shadow-xl transition-transform duration-300 ease-out will-change-transform md:hover:z-30 md:hover:scale-125 md:hover:shadow-2xl ${originClass}`}
             >
               <Image
                 src={offer.image}

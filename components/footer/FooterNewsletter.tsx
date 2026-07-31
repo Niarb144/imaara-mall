@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function FooterNewsletter() {
   return (
-    <section className="footer-reveal relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-md">
+    <section className="footer-reveal relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-md mt-2">
 
       <div className="absolute inset-0 bg-gradient-to-r from-brand-orange/10 via-transparent to-brand-lime/10" />
 

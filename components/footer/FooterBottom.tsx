@@ -7,7 +7,7 @@ export default function FooterBottom() {
   const year = new Date().getFullYear();
 
   return (
-    <section className="footer-reveal border-t border-white/10 pt-10">
+    <section className="footer-reveal border-t border-white pt-10">
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
 
         {/* Left */}
