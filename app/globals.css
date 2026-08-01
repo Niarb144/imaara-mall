@@ -43,6 +43,14 @@
    Base reset / defaults
    ------------------------------------------------------------------------- */
 @layer base {
+
+    html {
+    /* Reserves the scrollbar's width permanently, whether or not the page
+       is currently scrollable. Without this, locking body scroll (e.g. the
+       Navbar's full-screen menu) makes the scrollbar disappear and the
+       whole page shift sideways by its width on desktop. */
+    scrollbar-gutter: stable;
+  }
   
    body {
     background-color: var(--brand-sand);
