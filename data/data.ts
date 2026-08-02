@@ -171,6 +171,48 @@ export const HERO_SLIDES: HeroSlide[] = [
 ];
 
 // -----------------------------------------------------------------------------
+// Hero
+// -----------------------------------------------------------------------------
+export interface HeroPanel {
+  id: string;
+  title: string;
+  tagline: string;
+  link: string;
+  image: string;
+}
+ 
+export const HERO_PANELS: HeroPanel[] = [
+  {
+    id: "shopping",
+    title: "Summer Is In",
+    tagline: "New season styles just landed",
+    link: "/directory",
+    image: "/images/hero/hero-offers.jpg",
+  },
+  {
+    id: "stores",
+    title: "Find a Store",
+    tagline: "Browse the full store directory",
+    link: "/directory",
+    image: "/images/hero/hero-wellness.jpg",
+  },
+  {
+    id: "visit",
+    title: "Plan Your Visit",
+    tagline: "Everything you need to know",
+    link: "/visit",
+    image: "/images/hero/hero-entertainment.jpg",
+  },
+  {
+    id: "dining",
+    title: "Dining Delights",
+    tagline: "A culinary adventure awaits",
+    link: "/dining",
+    image: "/images/hero/hero-dining.jpg",
+  },
+];
+
+// -----------------------------------------------------------------------------
 // Mall services / amenities
 // -----------------------------------------------------------------------------
 export interface MallService {
