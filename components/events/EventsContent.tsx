@@ -9,7 +9,7 @@ interface Props {
 
 export default function EventsContent({ event }: Props) {
   return (
-    <div className="max-w-lg">
+    <div className="max-w-lg ml-10">
 
       <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-brand-gold">
         {event.category}

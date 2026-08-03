@@ -447,7 +447,7 @@ export const events: Event[] = [
       title:"The Party Is on!",
       date:"07.08.26",
       description:"Enjoy happy times at the Imaara Mall rooftop bar and restaurant.",
-      image:"/events/event2.jpg",
+      image:"/images/events/event2.jpg",
       slug:"rooftop-party"
   },
   {
@@ -456,7 +456,7 @@ export const events: Event[] = [
       title:"Maasai Cultural Experience",
       date:"15.08.26",
       description:"Immerse yourself in the rich traditions of the Maasai people.",
-      image:"/events/event3.jpg",
+      image:"/images/events/event3.jpg",
       slug:"maasai-culture"
   },
 ]
