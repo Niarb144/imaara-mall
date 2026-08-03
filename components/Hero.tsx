@@ -40,7 +40,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-black sm:h-[75dvh] sm:min-h-[480px]">
+    <section className="relative w-full overflow-hidden bg-black sm:h-[75dvh] sm:min-h-[480px] md:h-[90dvh]">
       {/* =====================================================================
           Mobile — swipeable scroll-snap carousel
       ===================================================================== */}
@@ -107,9 +107,9 @@ export default function Hero() {
       </div>
 
       {/* =====================================================================
-          Desktop — hover-expand grid (unchanged)
+          Desktop — hover-expand grid 
       ===================================================================== */}
-      <div className="hidden h-full w-full gap-2 p-2 sm:flex">
+      <div className="hidden h-[80%] w-full gap-4 p-6 mt-20 pt-4 sm:flex">
         {HERO_PANELS.map((panel) => {
           const isHovered = hoveredId === panel.id;
           const isDimmed = hoveredId !== null && !isHovered;
@@ -123,7 +123,7 @@ export default function Hero() {
               onFocus={() => setHoveredId(panel.id)}
               onBlur={() => setHoveredId(null)}
               style={{ flexGrow: isHovered ? 3 : isDimmed ? 0.6 : 1 }}
-              className="group relative flex min-w-0 basis-0 overflow-hidden rounded-2xl transition-[flex-grow] duration-500 ease-out"
+              className="group relative flex min-w-0 basis-0 overflow-hidden rounded transition-[flex-grow] duration-500 ease-out"
             >
               <Image
                 src={panel.image}
