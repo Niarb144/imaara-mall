@@ -438,7 +438,7 @@ export const events: Event[] = [
       title:"Happy Easter!",
       date:"03.07.26",
       description:"The season is here...",
-      image:"/events/event1.jpg",
+      image:"/images/events/event1.jpg",
       slug:"summer-is-in"
   },
   {
@@ -447,7 +447,7 @@ export const events: Event[] = [
       title:"The Party Is on!",
       date:"07.08.26",
       description:"Enjoy happy times at the Imaara Mall rooftop bar and restaurant.",
-      image:"/events/event1.jpg",
+      image:"/events/event2.jpg",
       slug:"rooftop-party"
   },
   {
