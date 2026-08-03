@@ -109,7 +109,7 @@ export default function Hero() {
       {/* =====================================================================
           Desktop — hover-expand grid 
       ===================================================================== */}
-      <div className="hidden h-[80%] w-full gap-4 p-6 mt-20 pt-4 sm:flex">
+      <div className="hidden h-full w-full gap-4 p-6 pt-4 sm:flex">
         {HERO_PANELS.map((panel) => {
           const isHovered = hoveredId === panel.id;
           const isDimmed = hoveredId !== null && !isHovered;

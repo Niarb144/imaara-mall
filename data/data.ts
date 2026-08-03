@@ -411,3 +411,52 @@ export const socialLinks = [
     href: "#",
   },
 ];
+
+// -----EVENTS SLIDER -----//
+export interface Event {
+
+    id: string;
+
+    title: string;
+
+    category: string;
+
+    date: string;
+
+    description: string;
+
+    image: string;
+
+    slug: string;
+
+}
+
+export const events: Event[] = [
+  {
+      id:"1",
+      category:"Easter Weekend",
+      title:"Happy Easter!",
+      date:"03.07.26",
+      description:"The season is here...",
+      image:"/events/event1.jpg",
+      slug:"summer-is-in"
+  },
+  {
+      id:"2",
+      category:"Party Time",
+      title:"The Party Is on!",
+      date:"07.08.26",
+      description:"Enjoy happy times at the Imaara Mall rooftop bar and restaurant.",
+      image:"/events/event1.jpg",
+      slug:"rooftop-party"
+  },
+  {
+      id:"3",
+      category:"Maasai Market",
+      title:"Maasai Cultural Experience",
+      date:"15.08.26",
+      description:"Immerse yourself in the rich traditions of the Maasai people.",
+      image:"/events/event3.jpg",
+      slug:"maasai-culture"
+  },
+]

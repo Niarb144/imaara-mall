@@ -6,6 +6,7 @@ import ServicesScrollSection from "@/components/ServicesScrollSection";
 import OffersSection from "@/components/OffersSection";
 import VideoSection from "@/components/VideoSection";
 import CallToAction from "@/components/CallToAction";
+import EventsSection from "@/components/events/EventsSection";
 
 export default function Home() {
   return (
@@ -13,8 +14,10 @@ export default function Home() {
       <Hero />
       <VideoSection />
       <CallToAction />
-      <StoreCategories />
+      <EventsSection />
       <ServicesScrollSection />
+      <StoreCategories />
+      
       <OffersSection />
     </>
   );
