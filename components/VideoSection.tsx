@@ -82,11 +82,11 @@ export default function VideoSection() {
       ref={sectionRef}
       className="relative h-[100vh] overflow-hidden bg-white"
     >
-        <div className="pt-24 text-center">
+        <div className="pt-24 mt-10 p-2 text-center">
 
             <h2
                 className="
-                text-6xl
+                text-9xl
                 tracking-tight
             "
             >
@@ -99,7 +99,7 @@ export default function VideoSection() {
             </p>
 
         </div>
-      <div className="absolute left-0 right-0 bottom-0 flex items-end justify-center pt-24 pb-0">
+      <div className="absolute left-0 right-0 bottom-0 flex items-end justify-center pt:8 md:pt-24 pb-0">
         <div
           ref={cardRef}
           className="
