@@ -184,8 +184,8 @@ export interface HeroPanel {
 export const HERO_PANELS: HeroPanel[] = [
   {
     id: "shopping",
-    title: "Summer Is In",
-    tagline: "New season styles just landed",
+    title: "Awesome Offers",
+    tagline: "Great deals on your favorite brands",
     link: "/directory",
     image: "/images/hero/hero-offers.jpg",
   },
@@ -198,8 +198,8 @@ export const HERO_PANELS: HeroPanel[] = [
   },
   {
     id: "visit",
-    title: "Plan Your Visit",
-    tagline: "Everything you need to know",
+    title: "Enjoy the Experience",
+    tagline: "Great shopping, dining, and entertainment under one roof",
     link: "/visit",
     image: "/images/hero/hero-entertainment.jpg",
   },

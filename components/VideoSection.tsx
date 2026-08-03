@@ -86,16 +86,15 @@ export default function VideoSection() {
 
             <h2
                 className="
-                font-serif
                 text-6xl
                 tracking-tight
             "
             >
-                FASHION DOME
+                The Imaara Mall
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-neutral-500">
-                Access true luxury under the Dome. A place that's home to
+                Access true premium shopping under the Imaara Lights. A place that's home to
                 your designer favourites, all a few steps from one another.
             </p>
 
@@ -125,6 +124,7 @@ export default function VideoSection() {
           </video>
         </div>
       </div>
+      
     </section>
   );
 }
