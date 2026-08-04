@@ -527,17 +527,17 @@ export interface VisitCard {
 
 export const planYourVisitCards: VisitCard[] = [
   {
-    id: "mall-map",
-    eyebrow: "Find Your Way",
-    title: "Interactive Mall Map",
-    image: "/plan-your-visit/mall-map.jpg",
+    id: "store-directory",
+    eyebrow: "Find A Store",
+    title: "Imaara Mall Store Directory",
+    image: "/images/home-living.jpg",
     href: "/store-directory",
   },
   {
     id: "mall-services",
     eyebrow: "At Your Convenience",
     title: "Mall Services",
-    image: "/plan-your-visit/mall-services.jpg",
+    image: "/images/services-background.jpg",
     href: "/services",
   },
 ];

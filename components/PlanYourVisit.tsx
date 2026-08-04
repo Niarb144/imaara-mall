@@ -4,16 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Playfair_Display } from "next/font/google";
 import { planYourVisitCards } from "@/data/data";
 
-// Swap for whatever display serif matches your brand — Playfair Display is
-// a close stand-in for the elegant serif in the reference.
-const displaySerif = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-display",
-});
 
 const EASE = [0.16, 1, 0.3, 1] as const; // expo-out — smooth, no overshoot
 
@@ -27,7 +19,7 @@ export default function PlanYourVisitSection() {
     hovered === null ? "1fr 1fr" : hovered === 0 ? "1.18fr 0.82fr" : "0.82fr 1.18fr";
 
   return (
-    <section className={`${displaySerif.variable} w-full bg-white py-20 sm:py-28`}>
+    <section className={`font-display w-full bg-white py-20 sm:py-28`}>
       <motion.h2
         className="text-center text-5xl sm:text-6xl text-neutral-900 mb-16 sm:mb-20"
         style={{ fontFamily: "var(--font-display)" }}
@@ -64,7 +56,7 @@ export default function PlanYourVisitSection() {
                   onMouseLeave={() => setHovered(null)}
                   onFocus={() => setHovered(i)}
                   onBlur={() => setHovered(null)}
-                  className="group block h-[460px] sm:h-[560px] rounded-none outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-neutral-900"
+                  className="group block h-[300px] sm:h-[400px] rounded-none outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-neutral-900"
                   style={{
                     transform: isHovered
                       ? "scale(1.045)"
@@ -83,7 +75,7 @@ export default function PlanYourVisitSection() {
                       alt=""
                       fill
                       draggable={false}
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 668px) 100vw, 50vw"
                       className="object-cover pointer-events-none select-none transition-transform duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
                     />
 
