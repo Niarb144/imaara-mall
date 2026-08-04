@@ -66,7 +66,7 @@ export default function EventsContent({  event,
   };
   
   return (
-    <div className="max-w-lg ml-18">
+    <div className="max-w-lg md:ml-18">
       <AnimatePresence mode="wait">
         <motion.div
           key={event.id}

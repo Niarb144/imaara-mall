@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fjalla_One, Quicksand, Lobster_Two } from "next/font/google";
+import { Fjalla_One, Quicksand, Lobster_Two, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 // -----Web-components------
@@ -30,6 +30,13 @@ const lobsterTwo = Lobster_Two({
   variable: "--font-lobster",
   display: "swap",
 });
+  
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "The Imaara Mall",
@@ -44,7 +51,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-       className={`${fjalla.variable} ${quicksand.variable} ${lobsterTwo.variable}`}
+       className={`${fjalla.variable} ${quicksand.variable} ${lobsterTwo.variable} ${playfairDisplay.variable}`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />

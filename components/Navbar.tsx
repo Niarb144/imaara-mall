@@ -103,6 +103,7 @@ export default function Navbar() {
           <div className="flex shrink-0 items-center gap-3">
             <a
               href="https://wa.me/254757800800"
+              target="_blank"
               aria-label="Chat with us"
               className="hidden h-10 w-10 items-center justify-center rounded-full text-brand-green transition-transform hover:-translate-y-0.5 md:flex"
             >

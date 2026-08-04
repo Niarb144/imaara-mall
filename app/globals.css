@@ -18,6 +18,7 @@
   --font-fjalla: "Fjalla One", sans-serif;
   --font-quicksand: "Quicksand", sans-serif;
   --font-lobster: "Lobster Two", cursive;
+  --font-display: "Playfair Display", serif;
 }
 
 /* Register the tokens as Tailwind utilities (Tailwind v4 CSS-first config).
@@ -34,7 +35,7 @@
   --color-brand-dark: var(--brand-dark);
   --color-brand-lime: var(--brand-lime);
 
-  --font-display: var(--font-fjalla);
+  --font-display: var(--font-display);
   --font-sans: var(--font-quicksand);
   --font-accent: var(--font-lobster);
 }
@@ -66,7 +67,7 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-fjalla), sans-serif;
+    font-family: var(--font-display), serif;
     text-transform: uppercase;
     letter-spacing: -0.02em;
     line-height: 1.05;

@@ -516,3 +516,28 @@ export const trendingStores: TrendingStore[] = [
     featured: true,
   },
 ];
+
+export interface VisitCard {
+  id: string;
+  eyebrow: string;
+  title: string;
+  image: string;
+  href: string;
+}
+
+export const planYourVisitCards: VisitCard[] = [
+  {
+    id: "mall-map",
+    eyebrow: "Find Your Way",
+    title: "Interactive Mall Map",
+    image: "/plan-your-visit/mall-map.jpg",
+    href: "/store-directory",
+  },
+  {
+    id: "mall-services",
+    eyebrow: "At Your Convenience",
+    title: "Mall Services",
+    image: "/plan-your-visit/mall-services.jpg",
+    href: "/services",
+  },
+];
