@@ -193,7 +193,7 @@ export default function TrendingStoresCarousel({
           <motion.div className="mt-8 w-fit" whileHover="hover" initial="rest" animate="rest">
             <Link
               href={ctaHref}
-              className="inline-block border border-neutral-900 px-6 py-3 text-xs tracking-[0.15em] uppercase text-neutral-900"
+              className="inline-block border border-neutral-900 px-6 py-3 text-xs tracking-[0.15em] uppercase text-neutral-900 hover:bg-brand-lime transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-neutral-900"
             >
               <motion.span
                 className="inline-block"
