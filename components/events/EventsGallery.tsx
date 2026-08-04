@@ -24,7 +24,7 @@ export default function EventsGallery({
 
   return (
     <LayoutGroup>
-      <div className="relative flex min-h-[650px] items-center justify-center">
+      <div className="relative flex min-h-[650px] items-center justify-center md:mr-20">
 
         {/* HERO */}
 
@@ -35,7 +35,7 @@ export default function EventsGallery({
           }}
           className="
             relative
-            h-[520px]
+            h-[460px]
             w-[360px]
             z-20
           "

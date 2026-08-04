@@ -7,6 +7,7 @@ import OffersSection from "@/components/OffersSection";
 import VideoSection from "@/components/VideoSection";
 import CallToAction from "@/components/CallToAction";
 import EventsSection from "@/components/events/EventsSection";
+import TrendingStoresCarousel from "@/components/TrendingStoresCarousel";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <VideoSection />
       <CallToAction />
       <EventsSection />
+      <TrendingStoresCarousel />
       <ServicesScrollSection />
       <StoreCategories />
       

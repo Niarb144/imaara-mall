@@ -460,3 +460,59 @@ export const events: Event[] = [
       slug:"maasai-culture"
   },
 ]
+
+// ----TRENDING STORES----//
+export type CarouselSize = "narrow" | "regular" | "wide";
+ 
+export interface TrendingStore {
+  id: string;
+  name: string;
+  image: string;
+  size: CarouselSize;
+  /** Featured cards render taller, like the Swatch spot in the reference. */
+  featured?: boolean;
+  href?: string;
+}
+ 
+// Swap `image` for real assets in /public. Any remote host must be added to
+// next.config.js images.remotePatterns if you keep using external URLs.
+export const trendingStores: TrendingStore[] = [
+  {
+    id: "apple",
+    name: "Apple Store",
+    image: "/images/stores/apple.jpg",
+    size: "regular",
+  },
+  {
+    id: "zara",
+    name: "Zara",
+    image: "/images/stores/zara.jpg",
+    size: "narrow",
+  },
+  {
+    id: "cjs",
+    name: "CJ's",
+    image: "/images/stores/cjs.jpg",
+    size: "wide",
+    featured: true,
+  },
+  {
+    id: "samsung",
+    name: "Samsung",
+    image: "/images/stores/samsung.jpg",
+    size: "regular",
+  },
+  {
+    id: "vivo",
+    name: "Vivo",
+    image: "/images/stores/vivo.jpg",
+    size: "wide",
+  },
+  {
+    id: "naivas",
+    name: "Naivas",
+    image: "/images/stores/naivas.jpg",
+    size: "narrow",
+    featured: true,
+  },
+];
