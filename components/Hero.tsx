@@ -135,7 +135,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10 transition-opacity duration-500" />
 
               <div className="relative z-10 flex flex-1 flex-col justify-end p-8">
-                <h2 className="text-4xl leading-none text-white">{panel.title}</h2>
+                <h2 className="text-3xl leading-none text-white">{panel.title}</h2>
 
                 {/* Tagline + link — revealed only on the expanded card */}
                 <div

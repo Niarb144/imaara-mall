@@ -388,8 +388,8 @@ export const mallInfo = {
   phone: "+254 757 800 800",
 
   openingHours: [
-    "Mon – Fri · 9:00 AM – 9:00 PM",
-    "Sat – Sun · 9:00 AM – 10:00 PM",
+    "Mon – Fri · 8:00 AM – 9:00 PM",
+    "Sat – Sun · 8:00 AM – 10:00 PM",
   ],
 };
 
@@ -539,5 +539,42 @@ export const planYourVisitCards: VisitCard[] = [
     title: "Mall Services",
     image: "/images/services-background.jpg",
     href: "/services",
+  },
+];
+
+// ----feature rows-----//
+export interface FeatureRow {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  description: string;
+  ctaLabel: string;
+  ctaHref: string;
+  image: string;
+  imageAlt: string;
+}
+
+// Rows render text-left/image-right, then alternate to image-left/text-right,
+// and so on — set purely by index (even = text-first) in the section below.
+export const featureRows: FeatureRow[] = [
+  {
+    id: "shop-the-mall",
+    title: "Shop The Mall",
+    description:
+      "Discover a world of shopping possibilities at our vibrant mall, where you can find everything from fashion and electronics to home goods and more.",
+    ctaLabel: "Explore Our Stores",
+    ctaHref: "/stores",
+    image: "/images/home-living.jpg",
+    imageAlt: "Imaara Mall",
+  },
+  {
+    id: "have-a-question",
+    title: "Have a Question? We're Here to Help",
+    description:
+      "Connect directly with one of our expert agents to enquire about general information, brand offers, Mall Gift Cards, and more.",
+    ctaLabel: "Connect With Us",
+    ctaHref: "/contact",
+    image: "/images/concierge.jpg",
+    imageAlt: "A concierge holding a phone with a QR code, boxes stacked behind her",
   },
 ];

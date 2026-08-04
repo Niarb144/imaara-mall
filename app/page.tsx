@@ -9,6 +9,7 @@ import CallToAction from "@/components/CallToAction";
 import EventsSection from "@/components/events/EventsSection";
 import TrendingStoresCarousel from "@/components/TrendingStoresCarousel";
 import PlanYourVisitSection from "@/components/PlanYourVisit";
+import FeatureRowsSection from "@/components/FeaturesRowSection";
 
 export default function Home() {
   return (
@@ -20,7 +21,8 @@ export default function Home() {
       <TrendingStoresCarousel />
       <PlanYourVisitSection />
       <ServicesScrollSection />
-      <StoreCategories />
+      <FeatureRowsSection />
+      {/* <StoreCategories /> */}
       
       <OffersSection />
     </>

@@ -82,11 +82,11 @@ export default function VideoSection() {
       ref={sectionRef}
       className="relative h-[100vh] overflow-hidden bg-white"
     >
-        <div className="pt-24 mt-10 p-2 text-center">
+        <div className="pt-18 mt-10 p-2 text-center">
 
             <h2
                 className="
-                text-9xl
+                text-8xl
                 tracking-tight
             "
             >

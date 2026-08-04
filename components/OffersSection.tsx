@@ -72,7 +72,7 @@ export default function OffersSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[100dvh] w-full overflow-hidden bg-brand-sand"
+      className="relative h-[100dvh] w-full overflow-hidden bg-white"
     >
       {/* Centered title + tagline — sits behind the cards so, as each card
           rises, it moves up and over this text */}
@@ -119,7 +119,7 @@ export default function OffersSection() {
               ref={(el) => {
                 cardRefs.current[index] = el;
               }}
-              className={`group relative h-full w-full overflow-hidden rounded-lg shadow-xl transition-transform duration-300 ease-out will-change-transform md:hover:z-30 md:hover:scale-125 md:hover:shadow-2xl ${originClass}`}
+              className={`group relative h-full w-full overflow-hidden shadow-xl transition-transform duration-300 ease-out will-change-transform md:hover:z-30 md:hover:scale-125 md:hover:shadow-2xl ${originClass}`}
             >
               <Image
                 src={offer.image}
