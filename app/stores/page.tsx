@@ -50,7 +50,7 @@ export default function StoreDirectory() {
   return (
     <>
     <div className="bg-white">
-      <StoreHero />
+      {/* <StoreHero /> */}
       <FeaturedStores />
       <StoreSearch
         value={search}
