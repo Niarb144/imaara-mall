@@ -11,7 +11,7 @@ const MAIN_NAV = [
   { label: "What's New", href: "/whats-new" },
   {
     label: "Shop",
-    href: "/directory",
+    href: "/stores",
     dropdown: ["Fashion", "Beauty", "Electronics", "Kids"],
   },
   {

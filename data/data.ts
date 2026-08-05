@@ -1,6 +1,7 @@
 // -----------------------------------------------------------------------------
 // Store directory
 // -----------------------------------------------------------------------------
+
 export type StoreCategory =
   | "Fashion"
   | "Beauty & Wellness"
@@ -10,96 +11,326 @@ export type StoreCategory =
   | "Entertainment"
   | "Home & Living";
 
+export type StoreFloor =
+  | "Ground Floor"
+  | "First Floor"
+  | "Second Floor"
+  | "Third Floor";
+
 export interface Store {
   id: string;
+  slug: string;
+
   name: string;
   description: string;
+
+  category: StoreCategory;
+
+  floor: StoreFloor;
+  unit: string;
+
+  featured: boolean;
+
   mobileContact: string;
   email: string;
   websiteUrl: string;
+
   images: string[];
+  logo?: string;
+
   workingHours: string;
-  category: StoreCategory;
+
+  tags: string[];
+  hasOffers?: boolean;
+  isNew?: boolean;
+  acceptsGiftCard?: boolean;
+
+  featuredOrder?: number;
+
+  socials?: {
+    instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+  };
+
+  coordinates?: {
+    floor: StoreFloor;
+    x: number;
+    y: number;
+  };
 }
 
 export const STORES: Store[] = [
   {
     id: "north-star-fashion",
+    slug: "north-star-fashion",
+
     name: "North Star Fashion",
     description:
-      "Contemporary ready-to-wear for men and women, with a rotating edit of local and international designers.",
+      "Contemporary ready-to-wear for men and women, featuring a curated mix of local and international designers.",
+
+    category: "Fashion",
+    floor: "First Floor",
+    unit: "F-112",
+
+    featured: true,
+
     mobileContact: "+254 700 111 222",
     email: "hello@northstarfashion.com",
     websiteUrl: "https://northstarfashion.example.com",
-    images: ["/images/stores/north-star-fashion-1.jpg", "/images/stores/north-star-fashion-2.jpg"],
-    workingHours: "Mon – Sat: 10:00 AM – 10:00 PM · Sun: 11:00 AM – 8:00 PM",
-    category: "Fashion",
+
+    images: [
+      "/images/stores/zara.jpg",
+      "/images/stores/north-star-fashion-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/north-star-fashion.svg",
+
+    workingHours:
+      "Mon – Sat: 10:00 AM – 10:00 PM · Sun: 11:00 AM – 8:00 PM",
+
+    tags: [
+      "fashion",
+      "clothing",
+      "menswear",
+      "womenswear",
+      "designer",
+      "apparel",
+    ],
   },
+
   {
     id: "velvet-and-vine",
+    slug: "velvet-and-vine",
+
     name: "Velvet & Vine",
-    description: "A boutique spa and skincare studio offering facials, massage, and a curated retail wall.",
+    description:
+      "Luxury spa and skincare studio offering premium facials, massage therapy, and curated beauty products.",
+
+    category: "Beauty & Wellness",
+    floor: "Second Floor",
+    unit: "S-204",
+
+    featured: true,
+
     mobileContact: "+254 700 222 333",
     email: "book@velvetandvine.com",
     websiteUrl: "https://velvetandvine.example.com",
-    images: ["/images/stores/velvet-and-vine-1.jpg"],
-    workingHours: "Daily: 9:00 AM – 9:00 PM",
-    category: "Beauty & Wellness",
+
+    images: [
+      "/images/stores/spa.jpg",
+      "/images/stores/velvet-and-vine-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/velvet-and-vine.svg",
+
+    workingHours:
+      "Daily: 9:00 AM – 9:00 PM",
+
+    tags: [
+      "spa",
+      "massage",
+      "beauty",
+      "facial",
+      "wellness",
+      "skincare",
+    ],
   },
+
   {
     id: "circuit-and-co",
+    slug: "circuit-and-co",
+
     name: "Circuit & Co.",
-    description: "Phones, laptops, and smart home gear, with an in-store repair counter and trade-in desk.",
+    description:
+      "Latest smartphones, laptops, gaming accessories, smart home devices, repairs, and trade-ins.",
+
+    category: "Electronics",
+    floor: "Ground Floor",
+    unit: "G-018",
+
+    featured: false,
+
     mobileContact: "+254 700 333 444",
     email: "support@circuitandco.com",
     websiteUrl: "https://circuitandco.example.com",
-    images: ["/images/stores/circuit-and-co-1.jpg"],
-    workingHours: "Mon – Sun: 10:00 AM – 10:00 PM",
-    category: "Electronics",
+
+    images: [
+      "/images/stores/samsung.jpg",
+      "/images/stores/circuit-and-co-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/circuit-and-co.svg",
+
+    workingHours:
+      "Mon – Sun: 10:00 AM – 10:00 PM",
+
+    tags: [
+      "electronics",
+      "phones",
+      "laptops",
+      "gaming",
+      "repair",
+      "apple",
+      "android",
+    ],
   },
+
   {
     id: "little-explorers",
+    slug: "little-explorers",
+
     name: "Little Explorers",
-    description: "Toys, books, and playroom furniture for newborns through pre-teens.",
+
+    description:
+      "A colourful children's store filled with educational toys, books, games, and nursery furniture.",
+
+    category: "Kids & Toys",
+    floor: "Second Floor",
+    unit: "S-221",
+
+    featured: false,
+
     mobileContact: "+254 700 444 555",
     email: "hello@littleexplorers.com",
     websiteUrl: "https://littleexplorers.example.com",
-    images: ["/images/stores/little-explorers-1.jpg"],
-    workingHours: "Mon – Sat: 10:00 AM – 9:00 PM · Sun: 11:00 AM – 7:00 PM",
-    category: "Kids & Toys",
+
+    images: [
+      "/images/stores/toys.jpg",
+      "/images/stores/little-explorers-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/little-explorers.svg",
+
+    workingHours:
+      "Mon – Sat: 10:00 AM – 9:00 PM · Sun: 11:00 AM – 7:00 PM",
+
+    tags: [
+      "kids",
+      "toys",
+      "books",
+      "baby",
+      "games",
+      "nursery",
+    ],
   },
+
   {
     id: "harbor-social",
+    slug: "harbor-social",
+
     name: "Harbor Social",
-    description: "An all-day restaurant and rooftop bar serving coastal-inspired small plates.",
+
+    description:
+      "An all-day dining destination serving breakfast, lunch, dinner, cocktails, and rooftop experiences.",
+
+    category: "Dining",
+    floor: "Third Floor",
+    unit: "R-305",
+
+    featured: true,
+
     mobileContact: "+254 700 555 666",
     email: "reservations@harborsocial.com",
     websiteUrl: "https://harborsocial.example.com",
-    images: ["/images/stores/harbor-social-1.jpg", "/images/stores/harbor-social-2.jpg"],
-    workingHours: "Daily: 11:00 AM – 12:00 AM",
-    category: "Dining",
+
+    images: [
+      "/images/stores/cjs.jpg",
+      "/images/stores/harbor-social-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/harbor-social.svg",
+
+    workingHours:
+      "Daily: 11:00 AM – 12:00 AM",
+
+    tags: [
+      "restaurant",
+      "food",
+      "bar",
+      "cocktails",
+      "lunch",
+      "dinner",
+      "rooftop",
+    ],
   },
+
   {
     id: "pixel-arcade",
+    slug: "pixel-arcade",
+
     name: "Pixel Arcade",
-    description: "A retro-meets-modern gaming arcade with VR pods, claw machines, and a party room.",
+
+    description:
+      "A family entertainment destination with arcade games, VR experiences, claw machines, and party rooms.",
+
+    category: "Entertainment",
+    floor: "Third Floor",
+    unit: "E-312",
+
+    featured: false,
+
     mobileContact: "+254 700 666 777",
     email: "play@pixelarcade.com",
     websiteUrl: "https://pixelarcade.example.com",
-    images: ["/images/stores/pixel-arcade-1.jpg"],
-    workingHours: "Daily: 10:00 AM – 11:00 PM",
-    category: "Entertainment",
+
+    images: [
+      "/images/stores/game.jpg",
+      "/images/stores/pixel-arcade-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/pixel-arcade.svg",
+
+    workingHours:
+      "Daily: 10:00 AM – 11:00 PM",
+
+    tags: [
+      "gaming",
+      "vr",
+      "arcade",
+      "family",
+      "fun",
+      "kids",
+    ],
   },
+
   {
     id: "nest-home",
+    slug: "nest-home",
+
     name: "Nest Home",
-    description: "Furniture, textiles, and decor for every room, with a free in-store styling consult.",
+
+    description:
+      "Modern furniture, décor, lighting, and interior styling for every room in your home.",
+
+    category: "Home & Living",
+    floor: "First Floor",
+    unit: "H-145",
+
+    featured: false,
+
     mobileContact: "+254 700 777 888",
     email: "hello@nesthome.com",
     websiteUrl: "https://nesthome.example.com",
-    images: ["/images/stores/nest-home-1.jpg"],
-    workingHours: "Mon – Sat: 10:00 AM – 9:00 PM · Sun: 11:00 AM – 7:00 PM",
-    category: "Home & Living",
+
+    images: [
+      "/images/stores/home.jpg",
+      "/images/stores/nest-home-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/nest-home.svg",
+
+    workingHours:
+      "Mon – Sat: 10:00 AM – 9:00 PM · Sun: 11:00 AM – 7:00 PM",
+
+    tags: [
+      "furniture",
+      "decor",
+      "lighting",
+      "home",
+      "interior",
+      "living",
+    ],
   },
 ];
 
