@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <VideoSection />
-      <CallToAction />
+      {/* <CallToAction /> */}
       <EventsSection />
       <TrendingStoresCarousel />
       <PlanYourVisitSection />
