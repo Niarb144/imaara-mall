@@ -111,7 +111,7 @@ export const STORES: Store[] = [
     floor: "First Floor",
     unit: "F-112",
 
-    featured: true,
+    featured: false,
 
     mobileContact: "+254 700 111 222",
     email: "hello@vivowomen.com",
@@ -149,7 +149,7 @@ export const STORES: Store[] = [
     floor: "Second Floor",
     unit: "S-204",
 
-    featured: true,
+    featured: false,
 
     mobileContact: "+254 700 222 333",
     email: "book@velvetandvine.com",
@@ -187,7 +187,7 @@ export const STORES: Store[] = [
     floor: "Ground Floor",
     unit: "G-018",
 
-    featured: false,
+    featured: true,
 
     mobileContact: "+254 700 333 444",
     email: "support@circuitandco.com",
