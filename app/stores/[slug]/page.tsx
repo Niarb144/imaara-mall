@@ -1,12 +1,17 @@
 import { notFound } from "next/navigation";
 import StoreHero from "@/components/store-detail/StoreHero";
+import StoreDescription from "@/components/store-detail/StoreDescription";
+import StoreInformation from "@/components/store-detail/StoreInformation";
+import StoreGallery from "@/components/store-detail/StoreGallery";
+import RelatedStores from "@/components/store-detail/RelatedStores";
 
 import { STORES } from "@/data/data";
+import { Store } from "lucide-react";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export async function generateStaticParams() {
@@ -15,11 +20,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function StorePage({
+export default async function StorePage({
   params,
 }: Props) {
+  const { slug } = await params;
+
   const store = STORES.find(
-    (store) => store.slug === params.slug
+    (store) => store.slug === slug
   );
 
   if (!store) {
@@ -30,8 +37,11 @@ export default function StorePage({
     <main>
 
       <StoreHero store={store} />
-
-      <p>{store.description}</p>
+      <StoreDescription store={store}>
+        <StoreInformation store={store} />
+      </StoreDescription>
+      <StoreGallery store={store} />
+      <RelatedStores store={store} />
 
     </main>
   );

@@ -45,7 +45,7 @@ export default function StoreCard({
             h-[350px]
             overflow-hidden
             border
-            border-brand-dark/10
+            border-brand-dark/50
             bg-brand-light
           "
         >

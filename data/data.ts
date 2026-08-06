@@ -100,6 +100,44 @@ export const STORES: Store[] = [
   },
 
   {
+    id: "vivo",
+    slug: "vivo-women",
+
+    name: "Vivo ",
+    description:
+      "Leading brand in women's fashion, offering a wide range of stylish clothing, footwear, and accessories for every occasion.",
+
+    category: "Fashion",
+    floor: "First Floor",
+    unit: "F-112",
+
+    featured: true,
+
+    mobileContact: "+254 700 111 222",
+    email: "hello@vivowomen.com",
+    websiteUrl: "https://vivowomen.example.com",
+
+    images: [
+      "/images/stores/vivo.jpg",
+      "/images/stores/vivo-2.jpg",
+    ],
+
+    logo: "/images/stores/logos/vivo.svg",
+
+    workingHours:
+      "Mon – Sat: 10:00 AM – 10:00 PM · Sun: 11:00 AM – 8:00 PM",
+
+    tags: [
+      "fashion",
+      "clothing",
+      "menswear",
+      "womenswear",
+      "designer",
+      "apparel",
+    ],
+  },
+
+  {
     id: "velvet-and-vine",
     slug: "velvet-and-vine",
 
