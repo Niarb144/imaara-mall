@@ -61,7 +61,7 @@ export default function ServiceCard({
           hover: { width: 120 },
         }}
         transition={{ duration: 0.35 }}
-        className="absolute left-0 top-0 h-px bg-brand-gold"
+        className="absolute left-0 top-0 h-px bg-brand-yellow/50"
       />
 
       <div className="flex items-start justify-between">
@@ -80,7 +80,7 @@ export default function ServiceCard({
         >
           <Icon
             size={32}
-            className="text-brand-gold"
+            className="text-brand-yellow/50 transition-colors group-hover:text-brand-yellow"
           />
         </motion.div>
 

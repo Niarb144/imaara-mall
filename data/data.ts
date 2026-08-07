@@ -517,7 +517,7 @@ export const SERVICES: MallService[] = [
     ],
 
     image: "/images/services/prayer-room.jpg",
-    icon:"HeartHandshake",
+    icon:"prayer",
   },
 
   {
@@ -537,9 +537,29 @@ export const SERVICES: MallService[] = [
       "Security personnel are stationed nearby."
     ],
 
-    image: "/images/services/atms.jpg",
-    icon: "CreditCard",
+    image: "/images/services/atm.jpg",
+    icon: "atm",
   },
+  {
+    id: "wifi",
+    title: "Free Wi-Fi",
+    description:"Access our complimentary Wi-Fi throughout the mall.",
+
+    details:
+      "Enjoy free high-speed Wi-Fi access in all public areas of the mall.",
+    location: "Throughout the mall",
+    image: "/images/services/free-wifi.jpg",
+    icon: "wifi",
+  },
+  {
+    id: "parking",
+    title: "Parking",
+    description: "Convenient and secure parking available throughout the mall.",
+    details: "Enjoy safe and accessible parking with easy access to all areas of the mall.",
+    location: "Basement Parking Level",
+    image: "/images/services/parking.jpg",
+    icon: "parking",
+  }
 ];
 
 // -----------------------------------------------------------------------------

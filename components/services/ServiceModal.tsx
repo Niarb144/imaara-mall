@@ -33,7 +33,7 @@ export default function ServiceModal({
           {/* Modal */}
 
           <div className="fixed inset-0 z-[60] overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center px-6 py-20">
+            <div className="flex min-h-[100dvh] items-center justify-center px-6 py-20">
 
               <motion.div
                 layoutId={`service-card-${service.id}`}
@@ -51,7 +51,7 @@ export default function ServiceModal({
                 {/* Image */}
                 <motion.div
                   layoutId={`service-image-${service.id}`}
-                  className="relative aspect-[16/8]"
+                  className="relative aspect-[5/4]"
                 >
                   <Image
                     src={service.image}
@@ -83,8 +83,10 @@ export default function ServiceModal({
                     bg-black/30
                     backdrop-blur
                     transition
-                    hover:border-brand-gold
-                    hover:text-brand-gold
+                    hover:border-brand-yellow/50
+                    hover:text-brand-yellow
+                    text-white/70
+                    cursor-pointer
                   "
                 >
                   <X size={22} />
