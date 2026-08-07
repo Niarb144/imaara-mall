@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { HERO_PANELS } from "@/data/data";
+import Link from "next/dist/client/link";
 
 export default function Hero() {
   // Desktop hover-expand state
@@ -50,7 +51,7 @@ export default function Hero() {
           className="flex snap-x snap-mandatory overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {HERO_PANELS.map((panel, index) => (
-            <a
+            <Link
               key={panel.id}
               ref={(el) => {
                 slideRefs.current[index] = el;
@@ -85,7 +86,7 @@ export default function Hero() {
                   </svg>
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 

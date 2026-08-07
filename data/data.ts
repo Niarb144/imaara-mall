@@ -2,6 +2,14 @@
 // Store directory
 // -----------------------------------------------------------------------------
 
+import {
+  Wifi,
+  HandCoins,
+  ParkingCircle,
+  Accessibility,
+  HeartHandshake,
+} from "lucide-react";
+
 export type StoreCategory =
   | "Fashion"
   | "Beauty & Wellness"
@@ -484,43 +492,62 @@ export const HERO_PANELS: HeroPanel[] = [
 // -----------------------------------------------------------------------------
 // Mall services / amenities
 // -----------------------------------------------------------------------------
+
 export interface MallService {
   id: string;
   title: string;
   description: string;
-  link: string;
+
+  details: string;
+  location: string;
+  instructions?: string[];
+
+  image: string;
+
+  icon: string;
 }
  
 export const SERVICES: MallService[] = [
   {
-    id: "free-wifi",
-    title: "Free Wi-Fi",
-    description: "Fast, complimentary internet across every level of the mall.",
-    link: "/services/free-wifi",
-  },
-  {
     id: "prayer-rooms",
     title: "Prayer Rooms",
-    description: "Quiet, dedicated rooms open throughout the day for all faiths.",
-    link: "/services/prayer-rooms",
+    description:
+      "Quiet, dedicated rooms open throughout the day for all faiths.",
+
+    details:
+      "Our prayer rooms provide a calm and respectful environment for visitors seeking a quiet place for prayer or reflection.",
+
+    location: "Ground Floor, East Wing next to Customer Service",
+
+    instructions: [
+      "Open daily during mall operating hours.",
+      "Please keep noise to a minimum.",
+      "Shoes should be removed where indicated."
+    ],
+
+    image: "/images/services/prayer-room.jpg",
+    icon:"HeartHandshake",
   },
-  {
-    id: "accessible-parking",
-    title: "Disabled Parking & Ramps",
-    description: "Reserved accessible bays and step-free ramp access at every entrance.",
-    link: "/services/accessible-parking",
-  },
-  {
-    id: "ample-parking",
-    title: "Ample Parking",
-    description: "Multi-level parking with real-time bay availability and valet options.",
-    link: "/services/ample-parking",
-  },
+
   {
     id: "atms",
     title: "ATM Machines",
-    description: "Multiple bank ATMs conveniently located near entrances and the food court.",
-    link: "/services/atms",
+    description:
+      "Multiple bank ATMs conveniently located throughout the mall.",
+
+    details:
+      "ATMs from multiple banks are available for convenient cash withdrawals and balance enquiries.",
+
+    location:
+      "Main Entrance, Food Court and Basement Parking Lobby",
+
+    instructions: [
+      "Available during mall operating hours.",
+      "Security personnel are stationed nearby."
+    ],
+
+    image: "/images/services/atms.jpg",
+    icon: "CreditCard",
   },
 ];
 
@@ -751,18 +778,21 @@ export const trendingStores: TrendingStore[] = [
     name: "Apple Store",
     image: "/images/stores/apple.jpg",
     size: "regular",
+    href: "/stores/apple",
   },
   {
     id: "zara",
     name: "Zara",
     image: "/images/stores/zara.jpg",
     size: "narrow",
+    href: "/stores/zara",
   },
   {
     id: "cjs",
     name: "CJ's",
     image: "/images/stores/cjs.jpg",
     size: "wide",
+    href: "/stores/cjs",
     featured: true,
   },
   {
@@ -770,18 +800,21 @@ export const trendingStores: TrendingStore[] = [
     name: "Samsung",
     image: "/images/stores/samsung.jpg",
     size: "regular",
+    href: "/stores/samsung",
   },
   {
     id: "vivo",
     name: "Vivo",
     image: "/images/stores/vivo.jpg",
     size: "wide",
+    href: "/stores/vivo-women",
   },
   {
     id: "naivas",
     name: "Naivas",
     image: "/images/stores/naivas.jpg",
     size: "narrow",
+    href: "/stores/naivas",
     featured: true,
   },
 ];
@@ -800,7 +833,7 @@ export const planYourVisitCards: VisitCard[] = [
     eyebrow: "Find A Store",
     title: "Imaara Mall Store Directory",
     image: "/images/home-living.jpg",
-    href: "/store-directory",
+    href: "/stores",
   },
   {
     id: "mall-services",

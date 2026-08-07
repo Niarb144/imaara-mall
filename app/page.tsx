@@ -16,15 +16,19 @@ export default function Home() {
     <>
       <Hero />
       <VideoSection />
-      {/* <CallToAction /> */}
+      <CallToAction />
+      <PlanYourVisitSection />
       <EventsSection />
       <TrendingStoresCarousel />
-      <PlanYourVisitSection />
       <ServicesScrollSection />
       <FeatureRowsSection />
+      {/* <OffersSection /> */}
+      {/* 
+      
+       */}
       {/* <StoreCategories /> */}
       
-      <OffersSection />
+      {/*  */}
     </>
   );
 }

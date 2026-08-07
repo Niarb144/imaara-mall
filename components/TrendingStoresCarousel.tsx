@@ -70,7 +70,7 @@ function Card({ store, index }: { store: TrendingStore; index: number }) {
 export default function TrendingStoresCarousel({
   title = "Trending Mall\nStores",
   ctaLabel = "Explore all brands",
-  ctaHref = "/brands",
+  ctaHref = "/stores",
   items = trendingStores,
 }: {
   title?: string;
