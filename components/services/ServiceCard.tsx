@@ -9,7 +9,6 @@ import {
   Car,
   CreditCard,
   HelpCircle,
-  LucideIcon,
 } from "lucide-react";
 
 import { MallService } from "@/data/data";
@@ -19,7 +18,7 @@ interface Props {
   onClick: (service: MallService) => void;
 }
 
-const ICONS: Record<string, LucideIcon> = {
+const ICONS: Record<string, React.FC<{ size?: number }>> = {
   wifi: Wifi,
   prayer: Landmark,
   accessibility: Accessibility,
@@ -80,7 +79,7 @@ export default function ServiceCard({
         >
           <Icon
             size={32}
-            className="text-brand-yellow/50 transition-colors group-hover:text-brand-yellow"
+            // className="text-brand-yellow/50 transition-colors group-hover:text-brand-yellow"
           />
         </motion.div>
 

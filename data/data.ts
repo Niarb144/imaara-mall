@@ -559,7 +559,7 @@ export const SERVICES: MallService[] = [
     location: "Basement Parking Level",
     image: "/images/services/parking.jpg",
     icon: "parking",
-  }
+  },
 ];
 
 // -----------------------------------------------------------------------------
