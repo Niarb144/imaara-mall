@@ -1,15 +1,6 @@
 // -----------------------------------------------------------------------------
 // Store directory
 // -----------------------------------------------------------------------------
-
-import {
-  Wifi,
-  HandCoins,
-  ParkingCircle,
-  Accessibility,
-  HeartHandshake,
-} from "lucide-react";
-
 export type StoreCategory =
   | "Fashion"
   | "Beauty & Wellness"

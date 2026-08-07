@@ -28,7 +28,7 @@ export default function ServicesSection() {
                 <p className="mt-2 text-sm text-brand-dark/70">{service.description}</p>
 
                 <Link
-                  href={service.link}
+                  href="/services"
                   className="mt-3 inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-brand-orange transition-colors hover:text-brand-pink"
                 >
                   Learn more
