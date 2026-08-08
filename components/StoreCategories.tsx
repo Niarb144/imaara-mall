@@ -24,10 +24,10 @@ export default function StoreCategories() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="mx-auto max-w-7xl px-4 py-16 sm:py-20">
+    <section ref={sectionRef} className="mx-auto max-w-7xl px-4 py-16 sm:py-20 bg-brand-dark">
       <div className="mb-10 text-center sm:mb-12">
         <p className="font-accent text-2xl text-brand-pink">Explore by</p>
-        <h2 className="text-3xl sm:text-4xl">Store Categories</h2>
+        <h2 className="text-3xl text-white sm:text-4xl">Store Categories</h2>
       </div>
 
       <div className="grid w-full grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4 md:gap-6">
@@ -38,9 +38,9 @@ export default function StoreCategories() {
           return (
             <a
               key={category.name}
-              href={`/directory?category=${encodeURIComponent(category.name)}`}
+              href={`/stores?category=${encodeURIComponent(category.name)}`}
               style={{ transitionDelay: visible ? `${index * 90}ms` : "0ms" }}
-              className={`group relative isolate block aspect-[4/5] w-full min-h-[220px] md:min-h-[350px] overflow-hidden rounded-2xl bg-brand-pink shadow-sm transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-20 hover:scale-110 hover:shadow-2xl ${
+              className={`group relative isolate block aspect-[4/5] w-full min-h-[220px] md:min-h-[350px] overflow-hidden bg-brand-pink shadow-sm transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:z-20 hover:scale-110 hover:shadow-2xl ${
                 visible
                   ? "translate-y-0 opacity-100"
                   : "-translate-y-12 opacity-0"

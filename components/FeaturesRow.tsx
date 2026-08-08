@@ -110,12 +110,12 @@ export default function FeatureRow({
         <p className="mt-5 text-base sm:text-lg text-neutral-600 leading-relaxed">
           {row.description}
         </p>
-        <Link
+        <a
           href={row.ctaHref}
           className="mt-8 inline-block w-fit border border-neutral-900 px-6 py-3 text-xs tracking-[0.15em] uppercase text-neutral-900 transition-colors hover:bg-brand-lime hover:text-white"
         >
           {row.ctaLabel}
-        </Link>
+        </a>
       </div>
 
       <div

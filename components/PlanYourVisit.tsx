@@ -49,7 +49,7 @@ export default function PlanYourVisitSection() {
                 viewport={{ once: true, margin: "0px 0px -10% 0px" }}
                 transition={{ duration: 0.6, delay: i * 0.08, ease: EASE }}
               >
-                <Link
+                <a
                   href={card.href}
                   aria-label={`${card.title} — ${card.eyebrow}`}
                   onMouseEnter={() => setHovered(i)}
@@ -93,7 +93,7 @@ export default function PlanYourVisitSection() {
                       </span>
                     </div>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             );
           })}

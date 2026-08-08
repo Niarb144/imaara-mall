@@ -191,7 +191,7 @@ export default function TrendingStoresCarousel({
           </h2>
 
           <motion.div className="mt-8 w-fit" whileHover="hover" initial="rest" animate="rest">
-            <Link
+            <a
               href={ctaHref}
               className="inline-block border border-neutral-900 px-6 py-3 text-xs tracking-[0.15em] uppercase text-neutral-900 hover:bg-brand-lime transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:ring-neutral-900"
             >
@@ -202,7 +202,7 @@ export default function TrendingStoresCarousel({
               >
                 {ctaLabel}
               </motion.span>
-            </Link>
+            </a>
           </motion.div>
         </motion.div>
 
