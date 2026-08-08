@@ -84,7 +84,7 @@ export default function EventsContent({  event,
           </motion.h3>
 
           <motion.p variants={itemVariants} className="mt-8 text-sm tracking-wider text-brand-muted">
-            {event.date}
+            {event.startDate}
           </motion.p>
 
           <motion.p variants={itemVariants} className="mt-6 leading-8 text-brand-muted">

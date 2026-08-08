@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { events } from "@/data/data";
+import { EVENTS } from "@/data/data";
 import EventsContent from "./EventsContent";
 import EventsGallery from "./EventsGallery";
 
 export default function EventsSection() {
   const [current, setCurrent] = useState(0);
 
-  const active = events[current];
+  const active = EVENTS[current];
 
-  // console.log(events[current]);
+  // console.log(EVENTS[current]);
 
   return (
     <section className="relative overflow-hidden bg-brand-dark py-16 text-brand-sand">
@@ -27,12 +27,12 @@ export default function EventsSection() {
           <EventsContent
             event={active}
             current={current}
-            total={events.length}
+            total={EVENTS.length}
             setCurrent={setCurrent}
           />
 
           <EventsGallery
-            events={events}
+            events={EVENTS}
             current={current}
             setCurrent={setCurrent}
           />

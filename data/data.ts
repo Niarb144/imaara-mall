@@ -794,54 +794,61 @@ export const socialLinks = [
   },
 ];
 
-// -----EVENTS SLIDER -----//
+// -----------------------------------------------------------------------------
+// Events
+// -----------------------------------------------------------------------------
+
 export interface Event {
+  id: string;
+  title: string;
+  category: string;
 
-    id: string;
+  /**
+   * Event date range.
+   * endDate is optional for single-day events.
+   */
+  startDate: string;
+  endDate?: string;
 
-    title: string;
-
-    category: string;
-
-    date: string;
-
-    description: string;
-
-    image: string;
-
-    slug: string;
-
+  description: string;
+  image: string;
+  slug: string;
 }
 
-export const events: Event[] = [
+export const EVENTS: Event[] = [
   {
-      id:"1",
-      category:"Easter Weekend",
-      title:"Happy Easter!",
-      date:"03.07.26",
-      description:"The season is here...",
-      image:"/images/events/event1.jpg",
-      slug:"summer-is-in"
+    id: "1",
+    category: "Easter Weekend",
+    title: "Happy Easter!",
+    startDate: "2026-07-03",
+    description:
+      "The season is here. Join us at Imaara Mall for a memorable Easter weekend filled with family, fun and great experiences.",
+    image: "/images/events/event1.jpg",
+    slug: "summer-is-in",
   },
+
   {
-      id:"2",
-      category:"Party Time",
-      title:"The Party Is on!",
-      date:"07.08.26",
-      description:"Enjoy happy times at the Imaara Mall rooftop bar and restaurant.",
-      image:"/images/events/event2.jpg",
-      slug:"rooftop-party"
+    id: "2",
+    category: "Party Time",
+    title: "The Party Is On!",
+    startDate: "2026-08-07",
+    description:
+      "Enjoy happy times at the Imaara Mall rooftop bar and restaurant.",
+    image: "/images/events/event2.jpg",
+    slug: "rooftop-party",
   },
+
   {
-      id:"3",
-      category:"Maasai Market",
-      title:"Maasai Cultural Experience",
-      date:"15.08.26",
-      description:"Immerse yourself in the rich traditions of the Maasai people.",
-      image:"/images/events/event3.jpg",
-      slug:"maasai-culture"
+    id: "3",
+    category: "Maasai Market",
+    title: "Maasai Cultural Experience",
+    startDate: "2026-08-15",
+    description:
+      "Immerse yourself in the rich traditions of the Maasai people through culture, food, craft and entertainment.",
+    image: "/images/events/event3.jpg",
+    slug: "maasai-culture",
   },
-]
+];
 
 // ----TRENDING STORES----//
 export type CarouselSize = "narrow" | "regular" | "wide";
