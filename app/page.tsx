@@ -20,7 +20,7 @@ export default function Home() {
       <PlanYourVisitSection />
       <EventsSection />
       <TrendingStoresCarousel />
-      <ServicesScrollSection />
+      {/* <ServicesScrollSection /> */}
       <FeatureRowsSection />
       {/* <OffersSection /> */}
       {/* 

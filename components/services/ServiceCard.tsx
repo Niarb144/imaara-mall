@@ -9,6 +9,7 @@ import {
   Car,
   CreditCard,
   HelpCircle,
+  type LucideIcon,
 } from "lucide-react";
 
 import { MallService } from "@/data/data";
@@ -18,7 +19,7 @@ interface Props {
   onClick: (service: MallService) => void;
 }
 
-const ICONS: Record<string, React.FC<{ size?: number }>> = {
+const ICONS: Record<string, LucideIcon> = {
   wifi: Wifi,
   prayer: Landmark,
   accessibility: Accessibility,
@@ -31,6 +32,12 @@ export default function ServiceCard({
   onClick,
 }: Props) {
   const Icon = ICONS[service.icon] ?? HelpCircle;
+
+  console.log({
+    serviceIcon: service.icon,
+    iconExists: !!ICONS[service.icon],
+    Icon: ICONS[service.icon],
+    });
 
   return (
     <motion.button
@@ -79,7 +86,7 @@ export default function ServiceCard({
         >
           <Icon
             size={32}
-            // className="text-brand-yellow/50 transition-colors group-hover:text-brand-yellow"
+            className="text-brand-yellow/50 transition-colors group-hover:text-brand-yellow"
           />
         </motion.div>
 

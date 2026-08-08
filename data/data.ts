@@ -560,6 +560,15 @@ export const SERVICES: MallService[] = [
     image: "/images/services/parking.jpg",
     icon: "parking",
   },
+  {
+    id: "accessibility",
+    title: "Accessibility",
+    description: "Wheelchair ramps, elevators, and accessible restrooms available.",
+    details: "Our mall is designed to be accessible to all visitors, with features to assist those with mobility challenges.",
+    location: "Throughout the mall",
+    image: "/images/services/accessibility.jpg",
+    icon: "accessibility",
+  }
 ];
 
 // -----------------------------------------------------------------------------
