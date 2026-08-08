@@ -574,48 +574,114 @@ export const SERVICES: MallService[] = [
 // -----------------------------------------------------------------------------
 // Offers
 // -----------------------------------------------------------------------------
+
 export interface Offer {
   id: string;
-  storeId: string;
+  storeId?: string;
+
   title: string;
   image: string;
+
+  /**
+   * Store / brand displayed on the offer card.
+   * For mall-wide offers this can be "Imaara Mall".
+   */
+  brand: string;
+
+  /**
+   * Optional short description shown below the brand.
+   */
+  description?: string;
+
+  /**
+   * Offer validity.
+   */
+  startDate?: string;
+  endDate?: string;
+
+  /**
+   * Optional category used by the filter.
+   * Examples: Fashion, Beauty, Dining, Entertainment.
+   */
+  category?: string;
 }
- 
+
 export const OFFERS: Offer[] = [
   {
     id: "offer-north-star-fashion",
     storeId: "north-star-fashion",
     title: "Buy 2, Get 1 Free",
+    brand: "North Star Fashion",
+    description:
+      "Shop selected styles and enjoy our latest buy two, get one free offer.",
+    startDate: "2026-08-01",
+    endDate: "2026-08-31",
+    category: "Fashion",
     image: "/images/offers/offer.jpg",
   },
+
   {
     id: "offer-velvet-and-vine",
     storeId: "velvet-and-vine",
     title: "20% Off All Facials",
+    brand: "Velvet & Vine",
+    description:
+      "Refresh your routine with 20% off selected facial treatments.",
+    startDate: "2026-08-01",
+    endDate: "2026-08-31",
+    category: "Beauty",
     image: "/images/offers/offer1.jpg",
   },
+
   {
     id: "offer-circuit-and-co",
     storeId: "circuit-and-co",
     title: "Bonus Trade-In Credit",
+    brand: "Circuit & Co.",
+    description:
+      "Upgrade your device and receive additional credit on selected trade-ins.",
+    startDate: "2026-08-01",
+    endDate: "2026-08-31",
+    category: "Electronics",
     image: "/images/offers/offer2.jpg",
   },
+
   {
     id: "offer-little-explorers",
     storeId: "little-explorers",
     title: "Kids' Books, 3 for 2",
+    brand: "Little Explorers",
+    description:
+      "Pick three selected children's books and pay for only two.",
+    startDate: "2026-08-01",
+    endDate: "2026-08-31",
+    category: "Books",
     image: "/images/offers/offer3.jpg",
   },
+
   {
     id: "offer-harbor-social",
     storeId: "harbor-social",
     title: "Happy Hour All Day Sunday",
+    brand: "Harbor Social",
+    description:
+      "Make Sundays better with selected drinks and bites at special prices.",
+    startDate: "2026-08-01",
+    endDate: "2026-08-31",
+    category: "Dining",
     image: "/images/offers/offer4.jpg",
   },
+
   {
     id: "offer-pixel-arcade",
     storeId: "pixel-arcade",
     title: "Double Arcade Credits",
+    brand: "Pixel Arcade",
+    description:
+      "Double your arcade credits every weekend throughout August.",
+    startDate: "2026-08-01",
+    endDate: "2026-08-31",
+    category: "Entertainment",
     image: "/images/offers/offer5.jpg",
   },
 ];
