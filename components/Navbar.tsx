@@ -16,7 +16,7 @@ const MAIN_NAV = [
   },
   {
     label: "Dine",
-    href: "/dining",
+    href: "/stores/dining",
     dropdown: ["Restaurants", "Cafes", "Fast Casual"],
   },
   {
@@ -26,18 +26,18 @@ const MAIN_NAV = [
   },
   {
     label: "Plan Your Visit",
-    href: "/visit",
+    href: "/services",
     dropdown: ["Getting Here", "Parking", "Accessibility"],
   },
   { label: "Services", href: "/services" },
 ];
 
 const QUICK_LINKS = [
-  { label: "Rooftop", href: "/directory/rooftop" },
-  { label: "Garden Terrace", href: "/directory/garden-terrace" },
+  { label: "Rooftop", href: "/rooftop" },
+  { label: "Gym", href: "/stores/gym" },
   { label: "Offers", href: "/offers" },
   { label: "Events", href: "/events" },
-  { label: "Exhibition Hall", href: "/directory/exhibition-hall" },
+  
 ];
 
 export default function Navbar() {
